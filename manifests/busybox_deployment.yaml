@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: busybox-deployment
+  name: curl-deployment
   labels:
-    app: busybox
+    app: curl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: busybox
+      app: curl
   template:
     metadata:
       labels:
-        app: busybox
+        app: curl
     spec:
       containers:
-        - name: busybox
-          image: busybox
-          command: ["sleep", "86400"]
+        - name: curl
+          image: curlimages/curl:latest
+          command: ["sleep", "84600"]
