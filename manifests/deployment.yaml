@@ -19,7 +19,7 @@ spec:
           name: web-app
           imagePullPolicy: Always
           volumeMounts:
-            - name: webapp_volume
+            - name: webapp-volume
               mountPath: /tmp
           resources:
             requests:
@@ -49,7 +49,7 @@ spec:
               port: 8080
             periodSeconds: 1
       volumes:
-        - name: webapp_volume
+        - name: webapp-volume
           persistentVolumeClaim:
             claimName: webapp-pvc
             
