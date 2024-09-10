@@ -18,6 +18,9 @@ spec:
         - image: mbps54/test-web-app:v5
           name: web-app
           imagePullPolicy: Always
+          volumeMounts:
+            - name: webapp_volume
+              mountPath: /tmp
           resources:
             requests:
               cpu: 100m
@@ -45,4 +48,8 @@ spec:
               path: /
               port: 8080
             periodSeconds: 1
+      volumes:
+        - name: webapp_volume
+          persistentVolumeClaim:
+            claimName: webapp-pvc
             
