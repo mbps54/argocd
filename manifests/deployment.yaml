@@ -14,8 +14,7 @@ spec:
       labels:
         app: web-app
     spec:
-      nodeSelector:
-        kubernetes.io/hostname: node01
+      nodeName: node01
       containers:
         - image: mbps54/test-web-app:v5
           name: web-app
