@@ -14,7 +14,7 @@ spec:
       labels:
         app: web-app
     spec:
-      nodeName: node01
+      nodeName: node02
       containers:
         - image: mbps54/test-web-app:v5
           name: web-app
