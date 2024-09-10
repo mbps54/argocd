@@ -14,7 +14,8 @@ spec:
       labels:
         app: web-app
     spec:
-      nodeName: node02
+      nodeSelector:
+        ssdtype: slow
       containers:
         - image: mbps54/test-web-app:v5
           name: web-app
