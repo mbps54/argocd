@@ -15,8 +15,9 @@ spec:
         app: web-app
     spec:
       containers:
-        - image: mbps54/test-web-app:v1
+        - image: mbps54/test-web-app:v5
           name: web-app
+          imagePullPolicy: Always
           resources:
             requests:
               cpu: 100m
