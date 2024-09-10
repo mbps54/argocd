@@ -15,7 +15,7 @@ spec:
         app: web-app
     spec:
       containers:
-        - image: mbps54/test-web-app:v51
+        - image: mbps54/test-web-app:v5
           name: web-app
           imagePullPolicy: Always
           resources:
@@ -29,7 +29,7 @@ spec:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 5
+            initialDelaySeconds: 1
             failureThreshold: 30
             periodSeconds: 1
           readinessProbe:
